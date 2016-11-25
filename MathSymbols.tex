@@ -1,0 +1,513 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{stix}
+\usepackage{graphicx,tipa}% http://ctan.org/pkg/{graphicx,tipa}
+\newcommand{\arc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\geometry{a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,}
+
+\title{Mathematical Symbols and Notation}
+\author{Arcaratus}
+\date{22 November, 2016}
+
+\setlength{\tabcolsep}{25pt}
+\renewcommand{\arraystretch}{1.6}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{-1}
+\section{Introduction}
+The following document is just a simple look-up chart for various mathematical
+symbols found throughout many topics of math along with a brief definition. Useful for all maths ranging from elementary school to high school, and maybe beyond. The level of formality of this paper can be seen in the numbering used for this section.\\
+\\
+Symbols are separated into rough groupings based on their respective topics. Groupings go something along the lines of: basic symbols, comparison symbols, set notation symbols, logic symbols, bracket symbols, algebraic notation, geometry symbols, linear algebra symbols, probability and statistical symbols, and calculus notation. Specific sets, functions and constants are at the end.\\
+\\
+\textbf{Note:} Negations are not displayed with the exception of the inequality negation.
+
+\section{Quick Definitions}
+
+\begin{longtable}{|| L{1.7cm} | L{3.5cm} | L{7cm} ||}
+ \hline
+ \multicolumn{3}{| c |}{Quick Definitions}\\
+ \hline
+ Symbol & Symbol Name & Definition\\
+ \hline
+ \endfirsthead
+ 
+ \hline
+ \endhead
+ 
+ \hline
+ \endfoot
+ 
+ \hline
+ \endlastfoot
+ 
+\hline\hline
+\(+\) & plus sign & addition\\
+\hline
+\(-\) & minus sign & subtraction\\
+\hline
+\(\pm\) & plus-minus & both plus and minus operations\\
+\hline
+\(\mp\) & minus-plus & both minus and plus operations\\
+\hline
+\(\times\) & times & multiplication\\
+\(\cdot\) & multiplication dot & \\
+\(\ast\) & asterisk &\\
+\hline
+\(\div\) & division (obelus) & division\\
+\(\slash\) & division slash &\\
+\hline
+\(\sqrt{}\) & square root & square root of\\
+\hline
+\(\sqrt[3]{}\) & cube root & cube root of\\
+\hline
+\(\sqrt[n]{}\) & \(n\textsuperscript{th}\)-root (radical) & \(n\textsuperscript{th}\)-root of\\
+\hline
+\(a^{n}\) & power & exponent\\
+\(a\)\^{}\(n\) & caret &\\
+\hline
+( ) & parentheses & perform the operations in parentheses first\\
+{[} {]} & brackets &\\
+\hline
+\(=\) & equals sign & is equal to\\
+\hline
+\(\neq\) & not equals sign & is not equal to\\
+\hline
+\(\approx\) & approximately equal & approximately equal to\\
+\hline
+\(\sim\) & tilde & weakly approximately equal to\\
+& & is similar to (geometry)\\
+& & has distribution of\\
+\hline
+\(\coloneqq\) & equal by definition & is defined as\\
+\hline
+\(\cong\) & congruency & is congruent to (geometry)\\
+\hline
+\(\equiv\) & triple bar & is congruent to (modular arithmetic)\\
+\hline
+\(<\) & strict inequality & is less than\\
+\(>\) & & is greater than\\
+\hline
+\(\ll\) & significant inequality & is much less than\\
+\(\gg\) & & is much greater than\\
+\hline
+\(\le\) & inequality & is less than or equal to\\
+\(\leqslant\) & & \\
+\(\ge\) & & is greater than or equal to\\
+\(\geqslant\) & & \\
+\hline
+\(\leqq\) & congruence relation & is less than\\
+\(\geqq\) & & is greater than\\
+\hline
+\(\propto\) & proportionality & is proportional to\\
+\hline
+\(\infty\) & lemniscate (infinity sign) & infinity\\
+\hline
+{\{} {\}} & braces & a collection of elements\\
+\hline
+\(\bigcup\) & union & all objects that belong to either or both sets\\
+\hline
+\(\bigcap\) & intersection & all objects that both sets have in common\\
+\hline
+\(\subseteq\) & subset & subset has less or equal elements than the set\\
+\hline
+\(\subset\) & proper/strict subset & subset has less elements than the set\\
+\hline
+\(\supseteq\) & superset & superset has more or equal elements than the set\\
+\hline
+\(\supset\) & proper/strict superset & subset has more elements than the set\\
+\hline
+\(\in\) & element of & is an element of\\
+\hline
+\(\ni\) & such that & such that\\
+& & has element\\
+\hline
+\(\preceq\) & precedes & precedes or equals\\
+\hline
+\(\prec\) & strictly precedes & strictly precedes\\
+\hline
+\(\succeq\) & succeeds & succeeds or equals\\
+\hline
+\(\succ\) & strictly succeeds & strictly succeeds\\
+\hline
+\(\mathcal{P} \left({S}\right)\) & power set & set of all subsets of \(S\)\\
+\hline
+\(A^{c}\) & complement & all objects that do not belong to set \(A\)\\
+\hline
+\(A \slash B\) & relative complement & all objects that belong to \(A\) but not \(B\)\\
+\hline
+\(A \triangle B\) & symmetric difference & all objects that belong to both \(A\) and \(B\)\\
+\(A \ominus B\) & & but not to their intersection\\
+\hline
+\((a,b)\) & ordered pair & collection of two elements\\
+\hline
+\(A \times B\) & Cartesian product & set of all ordered pairs from \(A\) and \(B\)\\
+\hline
+\(\mid A \mid\) & cardinality & number of elements in set \(A\)\\
+\hline
+\(\emptyset\) & empty set & the empty set; \(\emptyset = {\{\}}\)\\
+\hline
+\(\mathbb{U}\) & universal set & set of all possible values\\
+\hline
+\(\therefore\) & therefore & therefore\\
+\hline
+\(\because\) & because & because\\
+\hline
+\(\neg\) & negation & not\\
+\hline
+\(\vee\) & logical disjunction & or\\
+\hline
+\(\wedge\) & logical conjunction & and\\
+\hline
+\(\bigoplus\) & circled plus (oplus) & exclusive or; xor\\
+\hline
+\(\Rightarrow\) & right arrow & implies; if...then\\
+\(\rightarrow\) & & \\
+\hline
+\(\Leftarrow\) & left arrow & is implied by\\
+\hline
+\(\Leftrightarrow\) & if and only if (iff) & if and only if\\
+\(\leftrightarrow\) & & \\
+\hline
+\(\forall\) & for all & for all\\
+\hline
+\(\exists\) & there exists & there exists\\
+\hline
+\(\exists!\) & there exists exactly one & there exists exactly one\\
+\hline
+\(\blacksquare\) & Halmos finality symbol & end of proof; QED; tombstone\\
+\hline
+\(\lfloor\)...\(\rfloor\) & floor & largest integer less than or equal to\\
+\hline
+\(\lceil\)...\(\rceil\) & ceiling & smallest integer greater than or equal to\\
+\hline
+\(\lfloor\)...\(\rceil\) & nearest integer & nearest integer to\\
+\hline
+{[} {]} & closed interval & closed interval\\
+( {]} & left-open interval & left-open interval\\
+{[} ) & right-open interval & right-open interval\\
+( ) & open interval & open interval\\
+\hline
+\({n}!\) & factorial & \(n\) factorial\\
+\hline
+\(\mid{n}\mid\) & absolute value & absolute value of \(n\)\\
+\hline
+\({f(x)}\) & function & function of \(x\)\\
+\hline
+\({(f\circ g)}\) & function composition & \({(f\circ g)}(x) = {f(g(x))}\)\\
+\hline
+\(\mapsto\) & right arrow & maps to\\
+\hline
+\(\asymp\) & asymptomatic & is asymptomatic to\\
+\hline
+\(\angle\) & angle & angle\\
+\hline
+\(\sphericalangle\) & spherical angle & spherical angle\\
+\hline
+\(\measuredangle\) & measure of angle & measure of angle\\
+\({m\angle}\) & &\\
+\hline
+\(^{\circ}\) & degrees & degrees\\
+\hline
+\(^{r}\) & radians & radians\\
+\hline
+\(^{g}\) & gradians & gradians\\
+\hline
+\(^{'}\) & prime & arcminutes\\
+\hline
+\(^{''}\) & double prime & arcseconds\\
+\hline
+\(\overleftrightarrow{AB}\) & line & infinite line going through points A and B\\
+\hline
+\(\overline{AB}\) & line segment & line from point A to point B\\
+\hline
+\(\overrightarrow{AB}\) & ray & ray that starts from point A\\
+\(\overleftarrow{AB}\) & & ray that starts from point B\\
+\hline
+\(\arc{AB}\) & arc &a  minor arc going through points A and B\\
+\(\arc{ABC}\) & & a major arc going through points A, B and C\\
+\hline
+\(\perp\) & perpendicular & is perpendicular to\\
+\hline
+\(\parallel\) & parallel & is parallel to\\
+\hline
+\(\bigtriangleup\) & triangle & triangle\\
+\hline
+\(\bigcirc\) & circle & circle\\
+\hline
+\(\square\) & square & square\\
+\hline
+\(\mid\) & vertical bar & such that\\
+& & divides\\
+\hline
+\(\cdot\) & dot & dot product\\
+\hline
+\(\times\) & cross & cross product\\
+\hline
+\(\bigotimes\) & circled times (otimes) & tensor product\\
+\hline
+\(\mid{A}\mid\) & determinant & determinant of \(A\)\\
+\hline
+\(\parallel{n}\parallel\) & double bars & norm of \(n\)\\
+\hline
+\(A^{T}\) & transpose & matrix transpose\\
+\hline
+\(A^{\dagger}\) & Hermitian transpose & matrix conjugate transpose\\
+\(A^{\ast}\) & & \\
+\hline
+\(A^{-1}\) & inverse matrix & inverse matrix\\
+\hline
+\(P(A)\) & probability function & probability of \(A\)\\
+\(P(A \cup B)\) & & probability of \(A\) or \(B\)\\
+\(P(A \cap B)\) & & probability of \(A\) and \(B\)\\
+\(P(A \mid B)\) & & probability of \(A\) given that \(B\) occurred\\
+\hline
+\(f(x)\) & pdf & probability density function\\
+\hline
+\(F(x)\) & cdf & cumulative distribution function\\
+\hline
+\(\mu\) & population mean & mean of population values\\
+\hline
+\(E(X)\) & expectation value & expected value of \(X\)\\
+\(E(X \mid Y)\) & & expected value of \(X\) given \(Y\)\\
+\hline
+\(\sigma^{2}\) & variance & variance of population values\\
+\hline
+\(\sigma_{X}\) & standard deviation & standard deviation of \(X\)\\
+\hline
+\(\tilde{x}\) & median & median of \(x\)\\
+\hline
+\(\rho_{X,Y}\) & correlation & correlation between \(X\) and \(Y\)\\
+\hline
+\(_{n}P_{k}\) & permutation & \(k\) permutations of \(n\)\\
+\(P^{n}_{k}\) & & \\
+\(P(n,k)\) & & \\
+\hline
+\(_{n}C_{k}\) & combination & \(k\) combinations of \(n\)\\
+\(C^{n}_{k}\) & & \\
+\(C(n,k)\) & & \\
+\(\binom{n}{k}\) & binomial coefficient & \\
+\hline
+\(\bar{z}\) & z bar & complex conjugate of \(z\)\\
+& & mean of \(z\)\\
+\hline
+\(\vec{\textbf{v}}\) & vector & vector \textbf{v}\\
+\hline
+\(\hat{\textbf{u}}\) & hat & normalized version (unit vector) of \textbf{u}\\
+\hline
+\(\sum\) & sigma & summation; sum of all values\\
+\hline
+\(\prod\) & pi & product; product of all values\\
+\hline
+\(\Delta\) & delta & change or difference\\
+\hline
+\(\varepsilon\) & epsilon & a very small number near zero\\
+\hline
+\(\displaystyle{\lim_{x\to{0}} f(x)}\) & limit & limit of \(f(x)\) as \(x\) approaches 0\\
+\(\displaystyle{\lim_{x\to{\infty}} f(x)}\) & & limit of \(f(x)\) as \(x\) approaches \(\infty\)\\
+\(\displaystyle{\lim_{x\to{n}} f(x)}\) & & limit of \(f(x)\) as \(x\) approaches \(n\)\\
+\hline
+\(y'\) & derivative (Lagrange's notation) & derivative of \(y\)\\
+\(f'(x)\) & & derivative of \(f(x)\)\\
+\(f''(x)\) & second derivative & derivative of the derivative of \(f(x)\)\\
+\hline
+\(\frac{d}{dx}\) & derivative (Leibniz's notation) & derivative with respect to \(x\)\\
+\(\frac{df}{dx}\) &  & derivative of \(f(x)\) with respect to \(x\)\\
+\(\frac{d^{2}f}{dx^{2}}\) & second derivative & derivative of the derivative of \(f(x)\)\\
+\(\frac{d^{n}f}{dx^{n}}\) & \(n\textsuperscript{th}\) derivative & \(n\textsuperscript{th}\) derivative of \(f(x)\)\\
+\hline
+\(\frac{\partial f(x,y)}{\partial x}\) & partial derivative & partial derivative of \(f(x,y)\) with respect to \(x\)\\
+\hline
+\(\int\) & integral & integral\\
+\(\int f(x)\,dx\) & & integration of \(f(x)\) with respect to \(x\)\\
+\hline
+\(\iint\) & double integral & double integral\\
+\(\iint f(x,y)\,dx\,dy\) & & integration of \(f(x,y)\) with respect to \(x\) and \(y\)\\
+\hline
+\(\iiint\) & triple integral & triple integral\\
+\hline
+\(\oint\) & contour integral & line integral\\
+\hline
+\(\oiint\) & closed surface integral & closed surface integral\\
+\hline
+\(\oiiint\) & closed volume integral & closed volume integral\\
+\hline
+\(\nabla{f}\) & nabla / del & gradient of \(f\)\\
+\(\nabla\cdot\textbf{F}\) & & divergence of \(\textbf{F}\)\\
+\(\nabla\times\textbf{F}\) & & curl of \(\textbf{F}\)\\
+\hline
+\(\Delta{f}\) & Laplace operator & Laplacian of \(f\)\\
+\(\nabla^{2}f\) & & \\
+\(\nabla\cdot\nabla{f}\) & & \\
+\hline
+\(\vdash\) & turnstile & is provable\\
+\hline
+\(\models\) & double turnstile & models\\
+\hline
+\(\mathbb{N}\) & natural numbers & set of all natural numbers\\
+\hline
+\(\mathbb{Z}\) & integers & set of all integers\\
+\hline
+\(\mathbb{Q}\) & rational numbers & set of all rational numbers\\
+\hline
+\(\mathbb{R}\) & real numbers & set of all real numbers\\
+\hline
+\(\mathbb{C}\) & complex numbers & set of all complex numbers\\
+\hline
+\(\mathbb{H}\) & quaternions & set of all quaternions\\
+\hline
+\(\mathbb{O}\) & octonians & set of all octonians\\
+\hline
+\(\mathbb{S}\) & sedonians & set of all sedonians\\
+\hline
+\(\aleph_{0}\) & aleph & aleph-null; \(\mid\mathbb{N}\mid\)\\
+\(\aleph_{a}\) & & \(a\textsuperscript{th}\) infinite cardinality set\\
+\hline
+\(\mathfrak{c}\) & fraktur c & cardinality of the continuum; \(\mathfrak{c}=2^{\aleph_{0}}>\aleph_{0}\)\\
+\hline
+\(\beth_{0}\) & beth & \(\beth_{0}=\aleph_{0}\)\\
+\(\beth_{1}\) & & \(\beth_{1}=\mathfrak{c}\)\\
+\(\beth_{a+1}\) & & cardinality of the powerset of \(\beth_{a}\)\\
+\hline
+\(\Re{(z)}\) & real part & real part of \(z\)\\
+Re\((z)\) & & \\
+\hline
+\(\Im{(z)}\) & imaginary part & imaginary part of \(z\)\\
+Im\((z)\) & & \\
+\hline
+\(\sin{x}\) & sine & sine of \(x\)\\
+\hline
+\(\cos{x}\) & cosine & cosine of \(x\)\\
+\hline
+\(\tan{x}\) & tangent & tangent of \(x\)\\
+\hline
+\(\csc{x}\) & cosecant & cosecant of \(x\)\\
+\hline
+\(\sec{x}\) & secant & secant of \(x\)\\
+\hline
+\(\cot{x}\) & cotangent & cotangent of \(x\)\\
+\hline
+\(\arcsin{x}\) & arcsine & arcsine of \(x\)\\
+asin\(\,x\) & & \\
+\(\sin^{-1}{x}\) & inverse sine & inverse sine of \(x\)\\
+\hline
+\(\arccos{x}\) & arccosine & arccosine of \(x\)\\
+acos\(\,x\) & & \\
+\(\cos^{-1}{x}\) & inverse cosine & inverse cosine of \(x\)\\
+\hline
+\(\arctan{x}\) & arctangent & arctangent of \(x\)\\
+atan\(\,x\) & & \\
+\(\tan^{-1}{x}\) & tangent sine & inverse tangent of \(x\)\\
+\hline
+\(\sinh{x}\) & hyperbolic sine & hyperbolic sine of \(x\)\\
+\hline
+\(\cosh{x}\) & hyperbolic cosine & hyperbolic cosine of \(x\)\\
+\hline
+\(\tanh{x}\) & hyperbolic tangent & hyperbolic tangent of \(x\)\\
+\hline
+\(\exp({x})\) & exponent function & \(e\) raised to the power of \(x\)\\
+\hline
+\(\log_b{x}\) & logarithm & logarithm base \(b\) of \(x\)\\
+\hline
+\(\ln{x}\) & natural logarithm & natural logarithm (base \(e\)) of \(x\)\\
+\hline
+\(a\Mod{n}\) & modulo & \(a\) modulo \(n\)\\
+\hline
+lcm\((a,b)\) & lowest common multiple & lowest common multiple of \(a\) and \(b\)\\
+\hline
+gcd\((a,b)\) & greatest common divisor & greatest common divisor of \(a\) and \(b\)\\
+\hline
+\(\min\) & minimum & minimum of\\
+\(\displaystyle{\min_{x\in{S}}f(x)}\) & & minimum of \(f(x)\) for \(x\) in \(S\)\\
+\hline
+\(\max\) & maximum & maximum of\\
+\(\displaystyle{\max_{x\in{S}}f(x)}\) & & maximum of \(f(x)\) for \(x\) in \(S\)\\
+\hline
+\(\inf{x}\) & infinum & the infinum of\\ 
+\hline
+\(\sup{x}\) & supremum & the supremum of\\ 
+\hline
+\(\pi\) & pi & ratio between circumference and diameter; \(\pi\approx{3.141592653589793...}\)\\
+\hline
+\(e\) & Euler's number & base of natural logarithm; \(e\approx{2.718281828459045...}\)\\
+\hline
+\(i\) & \(i\) & the imaginary unit; \(i^{2}=-1\)\\
+\hline
+\(\varphi\) & phi & the golden ratio; \(\varphi=\frac{1+\sqrt{5}}{2}\approx{1.618033988749894...}\)\\
+\hline
+\(\gamma\) & Euler-Mascheroni constant & \(\gamma\approx{0.577215664901532...}\)\\
+\hline
+\(\tau\) & tau & ratio between circumference and radius; \(\tau=2\pi\approx{6.283185307179586...}\)\\
+\hline
+\(C\) & constant of integration & the constant of integration; an arbitrary fixed real number\\
+
+\end{longtable}
+
+\section{Greek Alphabet}
+
+\setlength{\tabcolsep}{26pt}
+
+\begin{longtable}{|| L{0.9cm} | L{0.8cm} | L{1.5cm} || L{0.9cm} | L{0.8cm} | L{1.5cm} ||}
+\hline
+\multicolumn{6}{| c |}{Greek Alphabet}\\
+\hline
+Upper Case & Lower Case & Letter Name & Upper Case & Lower Case & Letter Name\\
+\hline
+ \endfirsthead
+ 
+ \hline
+ \endhead
+ 
+ \hline
+ \endfoot
+ 
+ \hline
+ \endlastfoot
+\hline
+
+A & \(\alpha\) & alpha & B & \(\beta\) & beta\\
+\hline
+\(\Gamma\) & \(\gamma\) & gamma & \(\Delta\) & \(\delta\) & delta\\
+\hline
+E & \(\epsilon, \varepsilon\) & epsilon & Z & \(\zeta\) & zeta\\
+\hline
+H & \(\eta\) & eta & \(\Theta\) & \(\theta, \vartheta\) & theta\\
+\hline
+I & \(\iota\) & iota & K & \(\kappa, \varkappa\) & kappa\\
+\hline
+\(\Lambda\) & \(\lambda\) & lambda & M & \(\mu\) & mu\\
+\hline
+N & \(\nu\) & nu & \(\Xi\) & \(\xi\) & xi\\
+\hline
+O & o & omicron & \(\Pi\) & \(\pi, \varpi\) & pi\\
+\hline
+P & \(\rho, \varrho\) & rho & \(\Sigma\) & \(\sigma, \varsigma\) & sigma\\
+\hline
+T & \(\tau\) & tau & \(\Upsilon\) & \(\upsilon\) & upsilon\\
+\hline
+\(\Phi\) & \(\phi, \varphi\) & phi & X & \(\chi\) & chi\\
+\hline
+\(\Psi\) & \(\psi\) & psi & \(\Omega\) & \(\omega\) & omega\\
+\end{longtable}
+
+\centering
+
+"\(A\Gamma{}E\Omega{}M\mspace{-3mu}ET\mspace{-3mu}PHTO\Sigma{} \mspace{20mu} M\mspace{-3mu}H\mspace{-3mu}\Delta{}\mspace{-3mu}EI\Sigma{} \mspace{20mu} EI\Sigma{}T\Omega\)"\\
+
+\end{document}
